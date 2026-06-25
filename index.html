@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BMES@UCF Workshop Timeline 2026–2027</title>
+  <style>
+    :root{
+      --bmes-blue:#0b4f6c;
+      --bmes-blue-2:#0f6f8f;
+      --soft-blue:#e8f4f8;
+      --green:#2f855a;
+      --green-soft:#e6fffa;
+      --orange:#b7791f;
+      --orange-soft:#fffaf0;
+      --red:#c53030;
+      --red-soft:#fff5f5;
+      --purple:#6b46c1;
+      --purple-soft:#faf5ff;
+      --gray:#4a5568;
+      --light:#f7fafc;
+      --line:#cbd5e0;
+      --text:#1a202c;
+    }
+
+    *{box-sizing:border-box;}
+
+    body{
+      font-family: Georgia, "Times New Roman", serif;
+      margin:0;
+      background:#f4f7f9;
+      color:var(--text);
+      line-height:1.5;
+    }
+
+    .page{
+      max-width:1180px;
+      margin:32px auto;
+      background:white;
+      padding:36px;
+      border-radius:18px;
+      box-shadow:0 8px 28px rgba(0,0,0,.08);
+    }
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:18px;
+      border-bottom:1px solid #e2e8f0;
+      padding-bottom:22px;
+      margin-bottom:22px;
+    }
+
+    h1{
+      color:var(--bmes-blue);
+      margin:0 0 8px;
+      font-size:36px;
+      line-height:1.1;
+    }
+
+    h2{
+      color:var(--bmes-blue);
+      font-size:28px;
+      margin:26px 0 12px;
+    }
+
+    h3{
+      color:#153e52;
+      font-size:22px;
+      margin:22px 0 8px;
+    }
+
+    .subtitle{
+      color:var(--gray);
+      font-size:17px;
+      max-width:760px;
+    }
+
+    .badge{
+      background:var(--soft-blue);
+      color:var(--bmes-blue);
+      border:1px solid #bee3f8;
+      border-radius:999px;
+      padding:8px 13px;
+      font-weight:700;
+      white-space:nowrap;
+      font-size:14px;
+    }
+
+    .tabs{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:22px 0;
+      position:sticky;
+      top:0;
+      background:white;
+      padding:10px 0;
+      z-index:20;
+      border-bottom:1px solid #edf2f7;
+    }
+
+    .tab-button{
+      border:1px solid #cbd5e0;
+      background:#f7fafc;
+      color:#2d3748;
+      padding:10px 15px;
+      border-radius:999px;
+      cursor:pointer;
+      font-family:inherit;
+      font-size:15px;
+      font-weight:700;
+      transition:.15s ease;
+    }
+
+    .tab-button:hover{
+      transform:translateY(-1px);
+      border-color:var(--bmes-blue);
+      color:var(--bmes-blue);
+    }
+
+    .tab-button.active{
+      background:var(--bmes-blue);
+      color:white;
+      border-color:var(--bmes-blue);
+    }
+
+    .tab-panel{display:none;}
+    .tab-panel.active{display:block;}
+
+    .legend{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin:18px 0 30px;
+    }
+
+    .pill{
+      border-radius:999px;
+      padding:7px 12px;
+      font-size:14px;
+      font-weight:700;
+      border:1px solid transparent;
+    }
+
+    .track{background:#e6fffa;color:#22543d;border-color:#b2f5ea;}
+    .intro{background:#ebf8ff;color:#2a4365;border-color:#bee3f8;}
+    .pro{background:#faf5ff;color:#44337a;border-color:#e9d8fd;}
+    .ucf{background:#fffaf0;color:#7b341e;border-color:#fbd38d;}
+    .avoid{background:#fff5f5;color:#742a2a;border-color:#fed7d7;}
+    .planning{background:#edf2f7;color:#2d3748;border-color:#cbd5e0;}
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:16px;
+      margin:20px 0;
+    }
+
+    .card{
+      background:#f8fbfc;
+      border:1px solid #dbe7ec;
+      border-radius:16px;
+      padding:18px;
+      min-height:170px;
+    }
+
+    .card h3{
+      margin-top:0;
+      color:var(--bmes-blue);
+    }
+
+    .card.track-card{border-top:7px solid var(--green);}
+    .card.intro-card{border-top:7px solid #3182ce;}
+    .card.pro-card{border-top:7px solid var(--purple);}
+
+    .callout{
+      background:#f8fbfc;
+      border-left:7px solid var(--bmes-blue);
+      border-radius:14px;
+      padding:18px 20px;
+      margin:18px 0;
+      border-top:1px solid #dbe7ec;
+      border-right:1px solid #dbe7ec;
+      border-bottom:1px solid #dbe7ec;
+    }
+
+    .timeline{
+      position:relative;
+      margin-left:18px;
+      padding-left:28px;
+      border-left:4px solid var(--line);
+    }
+
+    .month{
+      margin:28px 0 10px;
+      padding:10px 16px;
+      color:white;
+      background:var(--bmes-blue);
+      border-radius:12px;
+      font-size:22px;
+      font-weight:700;
+    }
+
+    .item{
+      position:relative;
+      margin:16px 0;
+      padding:18px 20px;
+      border-radius:14px;
+      background:var(--light);
+      border:1px solid #e2e8f0;
+    }
+
+    .item::before{
+      content:"";
+      position:absolute;
+      left:-40px;
+      top:22px;
+      width:16px;
+      height:16px;
+      border-radius:50%;
+      background:white;
+      border:4px solid var(--bmes-blue);
+    }
+
+    .item.track-card{border-left:7px solid var(--green);}
+    .item.intro-card{border-left:7px solid #3182ce;}
+    .item.pro-card{border-left:7px solid var(--purple);}
+    .item.ucf-card{border-left:7px solid var(--orange);}
+    .item.avoid-card{border-left:7px solid var(--red);}
+    .item.planning-card{border-left:7px solid #718096;}
+
+    .date{
+      font-weight:700;
+      color:var(--bmes-blue);
+      font-size:16px;
+      margin-bottom:4px;
+    }
+
+    .title{
+      font-weight:700;
+      font-size:20px;
+      margin-bottom:6px;
+    }
+
+    .note{
+      color:#2d3748;
+      margin:0;
+    }
+
+    .tag{
+      display:inline-block;
+      margin-top:10px;
+      margin-right:6px;
+      padding:4px 9px;
+      font-size:12px;
+      font-weight:700;
+      border-radius:999px;
+      background:#edf2f7;
+      color:#2d3748;
+    }
+
+    .mini-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+      gap:12px;
+      margin-top:12px;
+    }
+
+    .mini{
+      background:white;
+      border:1px solid #e2e8f0;
+      border-radius:12px;
+      padding:14px;
+    }
+
+    .mini strong{color:var(--bmes-blue);}
+
+    table{
+      border-collapse:collapse;
+      width:100%;
+      margin:14px 0 22px;
+      overflow:hidden;
+      border-radius:12px;
+      font-size:15px;
+    }
+
+    th,td{
+      border:1px solid #d7dee6;
+      padding:10px 12px;
+      vertical-align:top;
+    }
+
+    th{
+      background:#edf2f7;
+      color:#1a202c;
+      text-align:left;
+    }
+
+    .small-note{
+      color:#4a5568;
+      font-size:14px;
+      margin-top:8px;
+    }
+
+    footer{
+      margin-top:28px;
+      color:#4a5568;
+      font-size:13px;
+      border-top:1px solid #e2e8f0;
+      padding-top:16px;
+    }
+
+    body.locked{
+      min-height:100vh;
+      display:grid;
+      place-items:center;
+      padding:24px;
+      background:
+        radial-gradient(circle at top left, rgba(15,111,143,.16), transparent 34%),
+        linear-gradient(135deg, #eef7fa 0%, #f7fafc 48%, #fffaf0 100%);
+    }
+
+    body.locked .page{
+      display:none;
+    }
+
+    .pin-screen{
+      width:min(100%, 560px);
+      background:white;
+      border:1px solid #dbe7ec;
+      border-radius:18px;
+      box-shadow:0 18px 48px rgba(11,79,108,.16);
+      padding:34px;
+    }
+
+    body:not(.locked) .pin-screen{
+      display:none;
+    }
+
+    .pin-mark{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      background:var(--soft-blue);
+      color:var(--bmes-blue);
+      border:1px solid #bee3f8;
+      border-radius:999px;
+      padding:8px 13px;
+      font-weight:700;
+      font-size:14px;
+      margin-bottom:18px;
+    }
+
+    .pin-screen h1{
+      font-size:34px;
+      margin-bottom:10px;
+    }
+
+    .pin-copy{
+      color:var(--gray);
+      font-size:17px;
+      margin:0 0 22px;
+    }
+
+    .pin-form{
+      display:grid;
+      gap:12px;
+    }
+
+    .pin-row{
+      display:flex;
+      gap:10px;
+    }
+
+    .pin-row input{
+      flex:1;
+      min-width:0;
+      border:1px solid #cbd5e0;
+      border-radius:12px;
+      padding:13px 14px;
+      font:700 18px Georgia, "Times New Roman", serif;
+      color:var(--text);
+      outline:none;
+    }
+
+    .pin-row input:focus{
+      border-color:var(--bmes-blue);
+      box-shadow:0 0 0 3px rgba(11,79,108,.14);
+    }
+
+    .pin-row button,
+    .lock-button{
+      border:0;
+      background:var(--bmes-blue);
+      color:white;
+      border-radius:12px;
+      padding:12px 16px;
+      font:700 15px Georgia, "Times New Roman", serif;
+      cursor:pointer;
+      transition:.15s ease;
+    }
+
+    .pin-row button:hover,
+    .lock-button:hover{
+      background:var(--bmes-blue-2);
+      transform:translateY(-1px);
+    }
+
+    .pin-message{
+      min-height:22px;
+      color:var(--red);
+      font-weight:700;
+      margin:0;
+    }
+
+    .pin-footnote{
+      color:#718096;
+      font-size:13px;
+      margin:18px 0 0;
+    }
+
+    .header-actions{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-end;
+      gap:10px;
+    }
+
+    .lock-button{
+      background:#edf2f7;
+      color:#2d3748;
+      border:1px solid #cbd5e0;
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:13px;
+    }
+
+    .lock-button:hover{
+      background:#e2e8f0;
+      color:var(--bmes-blue);
+    }
+
+    @media print{
+      body{background:white;}
+      .page{box-shadow:none;margin:0;border-radius:0;}
+      .tabs{position:static;}
+      .tab-panel{display:block;}
+      .tab-button{display:none;}
+      .item,.card{break-inside:avoid;}
+    }
+
+    @media(max-width:720px){
+      body.locked{padding:14px;}
+      .pin-screen{padding:24px;}
+      .pin-screen h1{font-size:29px;}
+      .pin-row{display:grid;}
+      .page{margin:0;border-radius:0;padding:22px;}
+      header{display:block;}
+      h1{font-size:30px;}
+      .badge{display:inline-block;margin-top:12px;}
+      .header-actions{align-items:flex-start;margin-top:12px;}
+      .timeline{margin-left:10px;padding-left:22px;}
+      .item::before{left:-34px;}
+    }
+  </style>
+</head>
+<body class="locked">
+  <section class="pin-screen" aria-label="Roadmap access">
+    <div class="pin-mark">BMES@UCF planning</div>
+    <h1>Workshop Roadmap</h1>
+    <p class="pin-copy">
+      This planning page is lightly tucked away for BMES peers. Enter the shared PIN to view the 2026-2027 workshop timeline.
+    </p>
+    <form class="pin-form" id="pin-form">
+      <label for="pin-input"><strong>Access PIN</strong></label>
+      <div class="pin-row">
+        <input id="pin-input" type="password" autocomplete="current-password" placeholder="Enter PIN" aria-describedby="pin-message" />
+        <button type="submit">View roadmap</button>
+      </div>
+      <p class="pin-message" id="pin-message" aria-live="polite"></p>
+    </form>
+    <p class="pin-footnote">
+      Note: this is casual privacy for a static GitHub Pages site, not security for confidential information.
+    </p>
+  </section>
+
+  <main class="page" id="roadmap-page">
+    <header>
+      <div>
+        <h1>BMES@UCF Workshop Timeline</h1>
+        <div class="subtitle">
+          A GitHub Pages-friendly planning site for the three main workshop directions:
+          Biomedical Manufacturing Track, Introduction to Biomedical Engineering Series, and Road to BMES Convention / Professional Readiness.
+        </div>
+      </div>
+      <div class="header-actions">
+        <div class="badge">Draft: 2026–2027</div>
+        <button class="lock-button" type="button" id="lock-button">Lock page</button>
+      </div>
+    </header>
+
+    <nav class="tabs" aria-label="Timeline tabs">
+      <button class="tab-button active" data-tab="home">Home</button>
+      <button class="tab-button" data-tab="fall">Fall 2026</button>
+      <button class="tab-button" data-tab="spring">Spring 2027</button>
+      <button class="tab-button" data-tab="dates">Important Dates</button>
+    </nav>
+
+    <section id="home" class="tab-panel active">
+      <h2>Home Screen</h2>
+      <div class="callout">
+        <strong>Main idea:</strong> start most workshops in September, keep the plan centered on the three strongest ideas,
+        and make each idea feel like a real series or track instead of random one-off events.
+      </div>
+
+      <div class="cards">
+        <div class="card track-card">
+          <h3>Idea 1: Biomedical Manufacturing Track</h3>
+          <p>
+            A weekly OTC-centered track where students build manufacturing confidence through CNC/manual milling exposure,
+            GD&amp;T basics, CAD-to-manufacturing thinking, safety, and a final biomedical-related deliverable.
+          </p>
+          <span class="tag">Weekly OTC</span>
+          <span class="tag">Cohort Model</span>
+          <span class="tag">Flagship Track</span>
+        </div>
+
+        <div class="card intro-card">
+          <h3>Idea 2: Introduction to Biomedical Engineering Series</h3>
+          <p>
+            A beginner-friendly series that helps students understand what BME is, what areas exist, and how engineering,
+            medicine, health science, computing, and research connect.
+          </p>
+          <span class="tag">Beginner Friendly</span>
+          <span class="tag">Educational</span>
+          <span class="tag">Interactive</span>
+        </div>
+
+        <div class="card pro-card">
+          <h3>Idea 3: Road to BMES Convention / Professional Readiness</h3>
+          <p>
+            A professional development series where students prepare for the BMES Annual Meeting, symposiums,
+            career fairs, networking, resumes, LinkedIn, and talking to industry or research professionals.
+          </p>
+          <span class="tag">Professional Prep</span>
+          <span class="tag">Convention Ready</span>
+          <span class="tag">Networking</span>
+        </div>
+      </div>
+
+      <h2>How This Should Be Read</h2>
+      <div class="mini-grid">
+        <div class="mini">
+          <strong>Placeholders are intentional.</strong><br/>
+          Titles like “Biomedical Manufacturing Track #1” are meant to be flexible until exact rooms, partners, dates, and facilitators are confirmed.
+        </div>
+        <div class="mini">
+          <strong>OTC is weekly.</strong><br/>
+          The manufacturing track is separated out as a repeating weekly pathway, not mixed randomly into other workshop ideas.
+        </div>
+        <div class="mini">
+          <strong>Fall is the pilot.</strong><br/>
+          Fall should prove which structures work. Spring can repeat, expand, or showcase the strongest ideas.
+        </div>
+        <div class="mini">
+          <strong>Document everything.</strong><br/>
+          Attendance, photos, flyers, feedback, partner names, and student deliverables should be captured throughout the year.
+        </div>
+      </div>
+
+      <h2>High-Level Flow</h2>
+      <table>
+        <tr>
+          <th>Semester Phase</th>
+          <th>Focus</th>
+          <th>Reason</th>
+        </tr>
+        <tr>
+          <td>Late August</td>
+          <td>Officer feedback, interest forms, workshop committee setup</td>
+          <td>Students are still settling into classes, so this is better for planning than major events.</td>
+        </tr>
+        <tr>
+          <td>September</td>
+          <td>Launch the three main ideas</td>
+          <td>This is the best month to build momentum before exams and mid-semester stress.</td>
+        </tr>
+        <tr>
+          <td>October</td>
+          <td>Run core series, prepare for BMES convention, continue weekly OTC</td>
+          <td>October has the BMES Annual Meeting and the UCF withdrawal deadline, so planning should be intentional.</td>
+        </tr>
+        <tr>
+          <td>November</td>
+          <td>Continue OTC, collect outcomes, do lighter follow-up workshops</td>
+          <td>Thanksgiving and late-semester workload make it better for wrap-up and documentation.</td>
+        </tr>
+        <tr>
+          <td>Spring</td>
+          <td>Repeat what worked, build toward BMES@UCF Symposium, document for awards/reporting</td>
+          <td>Spring can be used to strengthen the best Fall ideas and create a clearer showcase moment.</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="fall" class="tab-panel">
+      <h2>Fall 2026 Timeline</h2>
+      <p class="small-note">
+        Fall is focused on launching the three main ideas. Most workshops start in September. Exact dates can be adjusted around rooms, officers, OTC availability, and member schedules.
+      </p>
+
+      <div class="legend">
+        <span class="pill track">Biomedical Manufacturing Track</span>
+        <span class="pill intro">Intro to BME Series</span>
+        <span class="pill pro">Road to BMES Convention</span>
+        <span class="pill ucf">UCF Important Date</span>
+        <span class="pill avoid">Avoid Heavy Event</span>
+        <span class="pill planning">Planning</span>
+      </div>
+
+      <div class="timeline">
+        <div class="month">August 2026 — Setup, Not Heavy Workshops</div>
+
+        <div class="item ucf-card">
+          <div class="date">August 24</div>
+          <div class="title">UCF Fall Classes Begin</div>
+          <p class="note">Use this week for recruitment, officer feedback, tabling, Discord cleanup, and interest forms.</p>
+          <span class="tag">UCF Date</span>
+        </div>
+
+        <div class="item avoid-card">
+          <div class="date">August 24–28</div>
+          <div class="title">Add/Drop + Late Registration Week</div>
+          <p class="note">Avoid major workshops this week. Students are still finalizing schedules and deciding what they can commit to.</p>
+          <span class="tag">Avoid Heavy Event</span>
+        </div>
+
+        <div class="item planning-card">
+          <div class="date">Late August</div>
+          <div class="title">Workshop Interest Form + Officer Review</div>
+          <p class="note">Ask members which track they are most interested in: OTC/manufacturing, Intro to BME, or Road to BMES Convention.</p>
+          <span class="tag">Planning</span>
+        </div>
+
+        <div class="month">September 2026 — Launch Month</div>
+
+        <div class="item ucf-card">
+          <div class="date">September 7</div>
+          <div class="title">Labor Day — No Classes</div>
+          <p class="note">No workshop on this date. Start promotion after the long weekend.</p>
+          <span class="tag">UCF Holiday</span>
+        </div>
+
+        <div class="item planning-card">
+          <div class="date">Week of September 8</div>
+          <div class="title">Workshop Kickoff + Committee Interest</div>
+          <p class="note">Casual kickoff explaining the three major directions, collecting helpers, and letting students choose what series they want to follow.</p>
+          <span class="tag">Planning</span>
+          <span class="tag">Recruitment</span>
+        </div>
+
+        <div class="item track-card">
+          <div class="date">Week of September 14</div>
+          <div class="title">Biomedical Manufacturing Track #1</div>
+          <p class="note">OTC intro, cohort expectations, transportation/carpool planning, safety expectations, and what the final deliverable could be.</p>
+          <span class="tag">Weekly OTC</span>
+        </div>
+
+        <div class="item intro-card">
+          <div class="date">Week of September 14</div>
+          <div class="title">Introduction to Biomedical Engineering Series #1</div>
+          <p class="note">“What even is BME?” Overview of medical devices, imaging, biosignals, tissue/rehab engineering, AI in medicine, and clinical technology.</p>
+          <span class="tag">Intro to BME</span>
+        </div>
+
+        <div class="item pro-card">
+          <div class="date">Week of September 14</div>
+          <div class="title">Road to BMES Convention #1</div>
+          <p class="note">What the BMES Annual Meeting is, why students should care, and how to think about networking before arriving.</p>
+          <span class="tag">Convention Prep</span>
+        </div>
+
+        <div class="item track-card">
+          <div class="date">Week of September 21</div>
+          <div class="title">Biomedical Manufacturing Track #2</div>
+          <p class="note">Shop orientation, manufacturing safety, measuring tools, basic machining vocabulary, and how biomedical parts are manufactured.</p>
+          <span class="tag">Weekly OTC</span>
+        </div>
+
+        <div class="item intro-card">
+          <div class="date">Week of September 21</div>
+          <div class="title">Introduction to Biomedical Engineering Series #2</div>
+          <p class="note">Physiology basics for engineers: heart, lungs, muscles, brain, and how body systems connect to device design.</p>
+          <span class="tag">Intro to BME</span>
+        </div>
+
+        <div class="item pro-card">
+          <div class="date">Week of September 21</div>
+          <div class="title">Road to BMES Convention #2</div>
+          <p class="note">Resume, LinkedIn, elevator pitch, and how to introduce yourself as a student interested in BME/med-tech.</p>
+          <span class="tag">Professional Prep</span>
+        </div>
+
+        <div class="item track-card">
+          <div class="date">Week of September 28</div>
+          <div class="title">Biomedical Manufacturing Track #3</div>
+          <p class="note">CAD-to-manufacturing basics: design intent, tolerances, simple drawings, and how a sketch becomes a physical component.</p>
+          <span class="tag">Weekly OTC</span>
+        </div>
+
+        <div class="item intro-card">
+          <div class="date">Week of September 28</div>
+          <div class="title">Introduction to Biomedical Engineering Series #3</div>
+          <p class="note">Medical devices and instrumentation: monitors, pacemakers, ventilators, sensors, and how engineering shows up in healthcare.</p>
+          <span class="tag">Intro to BME</span>
+        </div>
+
+        <div class="item pro-card">
+          <div class="date">Week of September 28</div>
+          <div class="title">Road to BMES Convention #3</div>
+          <p class="note">How to ask good questions to researchers, companies, graduate students, physicians, and industry professionals without feeling awkward.</p>
+          <span class="tag">Networking</span>
+        </div>
+
+        <div class="month">October 2026 — Momentum + BMES Convention</div>
+
+        <div class="item track-card">
+          <div class="date">Week of October 5</div>
+          <div class="title">Biomedical Manufacturing Track #4</div>
+          <p class="note">GD&amp;T introduction, part constraints, manufacturing drawings, and what “quality” means for parts used in medical/technical systems.</p>
+          <span class="tag">Weekly OTC</span>
+        </div>
+
+        <div class="item intro-card">
+          <div class="date">Week of October 5</div>
+          <div class="title">Introduction to Biomedical Engineering Series #4</div>
+          <p class="note">Signals and data in medicine: ECG, EMG, pulse ox, heart rate, noise, sensors, and basic biomedical signal thinking.</p>
+          <span class="tag">Intro to BME</span>
+        </div>
+
+        <div class="item pro-card">
+          <div class="date">Week of October 5</div>
+          <div class="title">Road to BMES Convention #4</div>
+          <p class="note">Research/poster session prep: how to read a poster, how to ask about research, and how to follow up afterward.</p>
+          <span class="tag">Convention Prep</span>
+        </div>
+
+        <div class="item track-card">
+          <div class="date">Week of October 12</div>
+          <div class="title">Biomedical Manufacturing Track #5</div>
+          <p class="note">Prototype planning: choose a simple biomedical-related part or component concept that can become a portfolio artifact.</p>
+          <span class="tag">Weekly OTC</span>
+        </div>
+
+        <div class="item intro-card">
+          <div class="date">Week of October 12</div>
+          <div class="title">Introduction to Biomedical Engineering Series #5</div>
+          <p class="note">Careers and pathways: industry, clinical technology, research labs, graduate school, medical school, startups, and internships.</p>
+          <span class="tag">Intro to BME</span>
+        </div>
+
+        <div class="item pro-card">
+          <div class="date">Week of October 12</div>
+          <div class="title">Road to BMES Convention #5</div>
+          <p class="note">Final convention prep: what to bring, what to wear, how to introduce yourself, and how to make a plan before the event.</p>
+          <span class="tag">Convention Prep</span>
+        </div>
+
+        <div class="item track-card">
+          <div class="date">Week of October 19</div>
+          <div class="title">Biomedical Manufacturing Track #6</div>
+          <p class="note">Lighter weekly session or checkpoint because of BMES Annual Meeting week. Use for make-up, documentation, or small group progress.</p>
+          <span class="tag">Weekly OTC</span>
+          <span class="tag">Light Week</span>
+        </div>
+
+        <div class="item ucf-card">
+          <div class="date">October 21–24</div>
+          <div class="title">2026 BMES Annual Meeting</div>
+          <p class="note">This is the anchor for the Road to BMES Convention series.</p>
+          <span class="tag">BMES Date</span>
+        </div>
+
+        <div class="item avoid-card">
+          <div class="date">October 30</div>
+          <div class="title">UCF Withdrawal Deadline</div>
+          <p class="note">Avoid high-effort workshops around this deadline. Keep events lighter or purely optional.</p>
+          <span class="tag">Avoid Heavy Event</span>
+        </div>
+
+        <div class="month">November 2026 — Continue OTC + Wrap Outcomes</div>
+
+        <div class="item track-card">
+          <div class="date">Week of November 2</div>
+          <div class="title">Biomedical Manufacturing Track #7</div>
+          <p class="note">Continue prototype/manufacturing skills. Possible checkpoint: students explain what they are making and what they have learned so far.</p>
+          <span class="tag">Weekly OTC</span>
+        </div>
+
+        <div class="item pro-card">
+          <div class="date">Week of November 2</div>
+          <div class="title">Road to BMES Convention #6: Reflection + LinkedIn Post</div>
+          <p class="note">Students who attended or followed the series create a reflection, update LinkedIn, and document what they learned.</p>
+          <span class="tag">Professional Prep</span>
+          <span class="tag">Documentation</span>
+        </div>
+
+        <div class="item track-card">
+          <div class="date">Week of November 9</div>
+          <div class="title">Biomedical Manufacturing Track #8</div>
+          <p class="note">Manufacturing progress session. Possible focus: inspection, tolerances, revisions, and what went wrong/right in the build process.</p>
+          <span class="tag">Weekly OTC</span>
+        </div>
+
+        <div class="item ucf-card">
+          <div class="date">November 11</div>
+          <div class="title">Veterans Day — No Classes</div>
+          <p class="note">Do not schedule a workshop on this day.</p>
+          <span class="tag">UCF Holiday</span>
+        </div>
+
+        <div class="item track-card">
+          <div class="date">Week of November 16</div>
+          <div class="title">Biomedical Manufacturing Track #9</div>
+          <p class="note">Final build/checkpoint before Thanksgiving. Capture photos, student reflections, and progress evidence.</p>
+          <span class="tag">Weekly OTC</span>
+        </div>
+
+        <div class="item avoid-card">
+          <div class="date">November 25–28</div>
+          <div class="title">Thanksgiving Break / Holiday</div>
+          <p class="note">No workshops. Use the week before or after for reminders and documentation.</p>
+          <span class="tag">No Event</span>
+        </div>
+
+        <div class="item track-card">
+          <div class="date">Week of November 30</div>
+          <div class="title">Biomedical Manufacturing Track #10</div>
+          <p class="note">Final wrap-up, showcase, feedback, certificates/recognition if available, and documentation for BMES records.</p>
+          <span class="tag">Weekly OTC</span>
+          <span class="tag">Showcase</span>
+        </div>
+
+        <div class="month">December 2026 — No Major Workshops</div>
+
+        <div class="item ucf-card">
+          <div class="date">December 3</div>
+          <div class="title">Classes End</div>
+          <p class="note">Use this only for officer wrap-up and documentation cleanup.</p>
+          <span class="tag">UCF Date</span>
+        </div>
+
+        <div class="item avoid-card">
+          <div class="date">December 4–10</div>
+          <div class="title">Final Examination Period</div>
+          <p class="note">No major workshops during finals.</p>
+          <span class="tag">Finals</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="spring" class="tab-panel">
+      <h2>Spring 2027 Timeline</h2>
+      <p class="small-note">
+        I labeled this Spring 2027 because it follows Fall 2026 in the 2026–2027 officer year. This tab can be renamed if needed.
+      </p>
+
+      <div class="legend">
+        <span class="pill track">Biomedical Manufacturing Track #2</span>
+        <span class="pill intro">Intro / Expansion Series</span>
+        <span class="pill pro">Road to BMES@UCF Symposium</span>
+        <span class="pill ucf">UCF Important Date</span>
+        <span class="pill avoid">Avoid Heavy Event</span>
+        <span class="pill planning">Planning</span>
+      </div>
+
+      <div class="timeline">
+        <div class="month">January 2027 — Reset + Recruit</div>
+
+        <div class="item ucf-card">
+          <div class="date">January 11</div>
+          <div class="title">UCF Spring Classes Begin</div>
+          <p class="note">Use the first week for member re-engagement, interest forms, and officer check-ins.</p>
+          <span class="tag">UCF Date</span>
+        </div>
+
+        <div class="item avoid-card">
+          <div class="date">January 11–15</div>
+          <div class="title">Add/Drop + Late Registration Week</div>
+          <p class="note">Avoid major workshops. Promote the spring plan instead.</p>
+          <span class="tag">Avoid Heavy Event</span>
+        </div>
+
+        <div class="item ucf-card">
+          <div class="date">January 18</div>
+          <div class="title">Martin Luther King Jr. Day — No Classes</div>
+          <p class="note">No workshop on this day.</p>
+          <span class="tag">UCF Holiday</span>
+        </div>
+
+        <div class="item planning-card">
+          <div class="date">Week of January 25</div>
+          <div class="title">Spring Workshop Kickoff</div>
+          <p class="note">Recap Fall, announce which ideas are continuing, recruit helpers, and collect final interest for OTC/Symposium prep.</p>
+          <span class="tag">Planning</span>
+        </div>
+
+        <div class="item track-card">
+          <div class="date">Week of January 25</div>
+          <div class="title">Biomedical Manufacturing Track #2 — Session 1</div>
+          <p class="note">Spring cohort orientation, OTC expectations, transportation planning, and explanation of final deliverable/showcase.</p>
+          <span class="tag">Weekly OTC</span>
+        </div>
+
+        <div class="month">February 2027 — Core Spring Programming</div>
+
+        <div class="item track-card">
+          <div class="date">Week of February 1</div>
+          <div class="title">Biomedical Manufacturing Track #2 — Session 2</div>
+          <p class="note">Shop safety, measurement tools, machining basics, and how students should document their progress.</p>
+          <span class="tag">Weekly OTC</span>
+        </div>
+
+        <div class="item intro-card">
+          <div class="date">Week of February 1</div>
+          <div class="title">Introduction to Biomedical Engineering Series — Spring Run #1</div>
+          <p class="note">A spring version or expansion of Intro to BME for new members who joined after Fall.</p>
+          <span class="tag">Intro / Expansion</span>
+        </div>
+
+        <div class="item track-card">
+          <div class="date">Week of February 8</div>
+          <div class="title">Biomedical Manufacturing Track #2 — Session 3</div>
+          <p class="note">GD&amp;T basics, drawings, tolerances, and translating design intent into manufacturable parts.</p>
+          <span class="tag">Weekly OTC</span>
+        </div>
+
+        <div class="item intro-card">
+          <div class="date">Week of February 8</div>
+          <div class="title">Introduction to Biomedical Engineering Series — Spring Run #2</div>
+          <p class="note">Medical devices and clinical technology: how monitors, sensors, and assistive technologies connect to patient care.</p>
+          <span class="tag">Intro / Expansion</span>
+        </div>
+
+        <div class="item track-card">
+          <div class="date">Week of February 15</div>
+          <div class="title">Biomedical Manufacturing Track #2 — Session 4</div>
+          <p class="note">Prototype planning and project selection. Students choose a biomedical-related component or small portfolio artifact.</p>
+          <span class="tag">Weekly OTC</span>
+        </div>
+
+        <div class="item intro-card">
+          <div class="date">Week of February 15</div>
+          <div class="title">Introduction to Biomedical Engineering Series — Spring Run #3</div>
+          <p class="note">Biosignals, instrumentation, and biomedical data. Possible tie-in to ECG, EMG, heart rate, and pulse ox.</p>
+          <span class="tag">Intro / Expansion</span>
+        </div>
+
+        <div class="item track-card">
+          <div class="date">Week of February 22</div>
+          <div class="title">Biomedical Manufacturing Track #2 — Session 5</div>
+          <p class="note">CAD/CAM checkpoint, design revisions, and preparing for machining or final fabrication steps.</p>
+          <span class="tag">Weekly OTC</span>
+        </div>
+
+        <div class="item pro-card">
+          <div class="date">Week of February 22</div>
+          <div class="title">Road to BMES@UCF Symposium #1</div>
+          <p class="note">What the symposium is, what students should expect, and how to prepare before speaking with professionals or researchers.</p>
+          <span class="tag">Symposium Prep</span>
+        </div>
+
+        <div class="month">March 2027 — Symposium Prep + Spring Break</div>
+
+        <div class="item track-card">
+          <div class="date">Week of March 1</div>
+          <div class="title">Biomedical Manufacturing Track #2 — Session 6</div>
+          <p class="note">Machining/fabrication progress session. Begin collecting photos and short student reflections.</p>
+          <span class="tag">Weekly OTC</span>
+        </div>
+
+        <div class="item pro-card">
+          <div class="date">Week of March 1</div>
+          <div class="title">Road to BMES@UCF Symposium #2</div>
+          <p class="note">Resume, LinkedIn, elevator pitch, and how to introduce yourself at a professional event.</p>
+          <span class="tag">Professional Prep</span>
+        </div>
+
+        <div class="item track-card">
+          <div class="date">Week of March 8</div>
+          <div class="title">Biomedical Manufacturing Track #2 — Session 7</div>
+          <p class="note">Progress check before Spring Break. Identify what needs to be finished after break.</p>
+          <span class="tag">Weekly OTC</span>
+        </div>
+
+        <div class="item pro-card">
+          <div class="date">Week of March 8</div>
+          <div class="title">Road to BMES@UCF Symposium #3</div>
+          <p class="note">How to ask questions, how to talk to industry/research professionals, and how to follow up after the event.</p>
+          <span class="tag">Networking</span>
+        </div>
+
+        <div class="item avoid-card">
+          <div class="date">March 15–21</div>
+          <div class="title">Spring Break</div>
+          <p class="note">No workshops. Resume the following week.</p>
+          <span class="tag">No Event</span>
+        </div>
+
+        <div class="item track-card">
+          <div class="date">Week of March 22</div>
+          <div class="title">Biomedical Manufacturing Track #2 — Session 8</div>
+          <p class="note">Finishing, inspection, documentation, and preparing the final artifact for a showcase or portfolio.</p>
+          <span class="tag">Weekly OTC</span>
+        </div>
+
+        <div class="item pro-card">
+          <div class="date">Week of March 22</div>
+          <div class="title">Road to BMES@UCF Symposium #4</div>
+          <p class="note">Mock networking / mock symposium practice. Students practice introducing themselves and asking strong questions.</p>
+          <span class="tag">Symposium Prep</span>
+        </div>
+
+        <div class="item track-card">
+          <div class="date">Week of March 29</div>
+          <div class="title">Biomedical Manufacturing Track #2 — Session 9</div>
+          <p class="note">Portfolio and certificate prep. Students summarize what they learned and prepare pictures/descriptions of their work.</p>
+          <span class="tag">Weekly OTC</span>
+        </div>
+
+        <div class="item pro-card">
+          <div class="date">Week of March 29</div>
+          <div class="title">Road to BMES@UCF Symposium #5</div>
+          <p class="note">Final symposium prep and optional group LinkedIn post after the workshop/event.</p>
+          <span class="tag">Symposium Prep</span>
+        </div>
+
+        <div class="month">April 2027 — Showcase + Documentation</div>
+
+        <div class="item avoid-card">
+          <div class="date">April 2</div>
+          <div class="title">UCF Withdrawal Deadline</div>
+          <p class="note">Avoid a heavy event this week. Keep workshops optional or lighter.</p>
+          <span class="tag">Avoid Heavy Event</span>
+        </div>
+
+        <div class="item track-card">
+          <div class="date">Week of April 5</div>
+          <div class="title">Biomedical Manufacturing Track #2 — Session 10</div>
+          <p class="note">Final showcase, reflection, feedback form, and documentation for BMES records or Chapter Development Report evidence.</p>
+          <span class="tag">Weekly OTC</span>
+          <span class="tag">Showcase</span>
+        </div>
+
+        <div class="item planning-card">
+          <div class="date">Week of April 12</div>
+          <div class="title">Documentation + Chapter Development Report Checkpoint</div>
+          <p class="note">Organize photos, attendance, flyers, testimonials, budgets, partner involvement, and student outcomes.</p>
+          <span class="tag">Documentation</span>
+        </div>
+
+        <div class="item avoid-card">
+          <div class="date">April 26–May 4</div>
+          <div class="title">Classes End, Study Day, and Finals</div>
+          <p class="note">No major workshops. Only officer wrap-up, transition notes, and planning for the next year.</p>
+          <span class="tag">Finals</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="dates" class="tab-panel">
+      <h2>Important Dates Reference</h2>
+      <p class="small-note">
+        These are the major dates to keep in mind when planning workshops. The safest rule is to avoid major workshops during add/drop, withdrawal week, holiday weeks, and finals.
+      </p>
+
+      <h3>Fall 2026 — UCF Dates</h3>
+      <table>
+        <tr><th>Date</th><th>Planning Meaning</th></tr>
+        <tr><td>August 24</td><td>Classes begin. Use for recruitment and interest forms.</td></tr>
+        <tr><td>August 24–28</td><td>Late registration / add-drop week. Avoid major workshops.</td></tr>
+        <tr><td>August 28</td><td>Add/drop deadline and last day to drop with full refund.</td></tr>
+        <tr><td>September 7</td><td>Labor Day. No classes.</td></tr>
+        <tr><td>October 21–24</td><td>BMES Annual Meeting. Anchor for “Road to BMES Convention.”</td></tr>
+        <tr><td>October 30</td><td>Withdrawal deadline. Avoid high-effort workshops.</td></tr>
+        <tr><td>November 11</td><td>Veterans Day. No classes.</td></tr>
+        <tr><td>November 25</td><td>Thanksgiving Wednesday. Classes not held.</td></tr>
+        <tr><td>November 26–28</td><td>Thanksgiving holiday. No workshops.</td></tr>
+        <tr><td>December 3</td><td>Classes end.</td></tr>
+        <tr><td>December 4–10</td><td>Final examination period. No workshops.</td></tr>
+      </table>
+
+      <h3>Spring 2027 — UCF Dates</h3>
+      <table>
+        <tr><th>Date</th><th>Planning Meaning</th></tr>
+        <tr><td>January 11</td><td>Classes begin. Use for re-engagement and interest forms.</td></tr>
+        <tr><td>January 11–15</td><td>Late registration / add-drop week. Avoid major workshops.</td></tr>
+        <tr><td>January 15</td><td>Add/drop deadline and last day to drop with full refund.</td></tr>
+        <tr><td>January 18</td><td>Martin Luther King Jr. Day. No classes.</td></tr>
+        <tr><td>March 15–21</td><td>Spring Break. No workshops.</td></tr>
+        <tr><td>April 2</td><td>Withdrawal deadline. Avoid heavy workshops.</td></tr>
+        <tr><td>April 26</td><td>Classes end.</td></tr>
+        <tr><td>April 27</td><td>Study Day. No workshops.</td></tr>
+        <tr><td>April 28–May 4</td><td>Final examination period. No workshops.</td></tr>
+      </table>
+
+      <h3>BMES / Chapter Planning Dates</h3>
+      <table>
+        <tr><th>Date / Window</th><th>Planning Meaning</th></tr>
+        <tr><td>October 21–24, 2026</td><td>2026 BMES Annual Meeting. Use Road to BMES Convention series to prepare members.</td></tr>
+        <tr><td>March/April 2027</td><td>BMES@UCF Symposium placeholder. Use Road to BMES@UCF Symposium series in the weeks leading up to it.</td></tr>
+        <tr><td>April 2027</td><td>Documentation checkpoint for photos, attendance, student outcomes, partner involvement, and award/report evidence.</td></tr>
+      </table>
+    </section>
+
+    <footer>
+      Draft created for BMES@UCF officer planning. Designed as a single-file HTML page for GitHub Pages.
+      Sources to verify before publishing: UCF Fall 2026 Academic Calendar, UCF Spring 2027 Academic Calendar, and BMES@UCF internal workshop planning notes.
+    </footer>
+  </main>
+
+  <script>
+    const ACCESS_PIN = "bmes123";
+    const ACCESS_KEY = "bmesRoadmapAccess";
+    const pinForm = document.getElementById("pin-form");
+    const pinInput = document.getElementById("pin-input");
+    const pinMessage = document.getElementById("pin-message");
+    const lockButton = document.getElementById("lock-button");
+
+    function unlockPage(){
+      document.body.classList.remove("locked");
+      localStorage.setItem(ACCESS_KEY, "granted");
+    }
+
+    function lockPage(){
+      localStorage.removeItem(ACCESS_KEY);
+      document.body.classList.add("locked");
+      pinInput.value = "";
+      pinMessage.textContent = "";
+      pinInput.focus();
+      window.scrollTo({top:0, behavior:"smooth"});
+    }
+
+    if(localStorage.getItem(ACCESS_KEY) === "granted"){
+      unlockPage();
+    } else {
+      pinInput.focus();
+    }
+
+    pinForm.addEventListener("submit", event => {
+      event.preventDefault();
+      if(pinInput.value.trim() === ACCESS_PIN){
+        pinMessage.textContent = "";
+        unlockPage();
+      } else {
+        pinMessage.textContent = "That PIN did not work. Try the shared BMES code.";
+        pinInput.select();
+      }
+    });
+
+    lockButton.addEventListener("click", lockPage);
+
+    const buttons = document.querySelectorAll(".tab-button");
+    const panels = document.querySelectorAll(".tab-panel");
+
+    function activateTab(tabId){
+      buttons.forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.tab === tabId);
+      });
+      panels.forEach(panel => {
+        panel.classList.toggle("active", panel.id === tabId);
+      });
+      window.scrollTo({top:0, behavior:"smooth"});
+    }
+
+    buttons.forEach(button => {
+      button.addEventListener("click", () => activateTab(button.dataset.tab));
+    });
+
+    // Allow links like index.html#fall or index.html#spring
+    const hash = window.location.hash.replace("#", "");
+    if(hash && document.getElementById(hash)){
+      activateTab(hash);
+    }
+  </script>
+</body>
+</html>
